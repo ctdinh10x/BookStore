@@ -1,0 +1,367 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: cursive;
+}
+
+
+.all{
+    min-height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(https://top10tphcm.com/wp-content/uploads/2019/05/Top-trang-web-xem-phim-anime-tot-nhat.jpg);
+}
+
+.SignUp{
+    padding: 15px 30px;
+    width: 400px;
+    height: 600px;
+    background-color:  #ffff99;
+    border-radius: 3%;
+    box-shadow:2px 5px 5px #888888;
+    display: inline-table;
+}
+
+input{
+	background-color: antiquewhite;
+}
+
+.p_signup{
+    font-size: 30px;
+    height: 70px;
+    width: 100%;
+    display: inline;
+}
+
+
+.p_signup >p{
+    line-height: 70px;
+    display: inline-block;
+}
+
+.close{
+    float: right;
+    padding: 1px 9px 5px 9px;
+    border: 1px solid #d1d0d0;
+    border-radius: 50%;
+    box-shadow: 1px 1px #e0dede;
+    background-color: red;
+}
+
+.close >a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+.ti-close{
+    /* line-height: 20px; */
+    /* text-align: center; */
+}
+
+.signup_gg{
+    padding: 20px 0px;
+    border-bottom: 1px solid #e2dfdf;
+    margin-bottom: 20px;
+}
+
+.signup_gg :hover{
+    background-color: #f1eeee;
+    cursor: pointer;
+}
+
+.signup_a{
+    border-right: 30px;
+    border-left: 30px;
+    padding: 10px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+
+.signup_a >a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.name_info >p{
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+.name_info >input{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.email_info >p{
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+.email_info >input{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.password_info >p{
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+.password_info >input{
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c2bfbf;
+    box-shadow: 1px 1px #e2dfdf;
+}
+
+.checkbox >input{
+    font-size: 15px;
+}
+
+.check_info{
+    font-size: 18px;
+    color: #575555;
+}
+
+.check_info >a{
+    text-decoration: none;
+    color: #3393FF;
+    font-weight: 600;
+}
+
+.signup_button{
+    text-align: center;
+    margin-top:20px
+}
+
+.btn_signup{
+    border: 10px 0px 20px 0px;
+    border-bottom: 1px solid #e2dfdf;
+    margin-bottom: 30px; 
+}
+
+.signup_button>a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/* .btn_signup :hover{
+    background-color: rgb(96, 110, 235);
+    cursor: pointer;
+} */
+
+.end_signup{
+    text-align: center;
+}
+
+.end_signup>a{
+    text-decoration: none;
+    color: #3393FF;
+    font-weight: 600;
+}
+
+.end_signup>p{
+    color: #575555;
+}
+
+.end_signup{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.forgot{
+    text-align: center;
+}
+
+.forgot >a{
+    text-decoration: none;
+    color: #3393FF;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#login{
+    padding-bottom: 30px;
+}
+
+.submit_button{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    background-color: #3393FF;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message{
+	color: red;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#username{
+	 position: relative;
+            -webkit-animation: mymove 5s infinite;
+            /* Safari 4.0 - 8.0 */
+            animation: mymove 500ms forwards;
+     -webkit-animation-timing-function: linear;
+     animation-timing-function: linear;
+}
+
+
+#password{
+	position: relative;
+            -webkit-animation: mymove2 5s infinite;
+            /* Safari 4.0 - 8.0 */
+            animation: mymove2 500ms forwards;
+     -webkit-animation-timing-function: linear;
+     animation-timing-function: linear;
+}
+
+#submit{
+	position: relative;
+            -webkit-animation: mymove3 5s infinite;
+            /* Safari 4.0 - 8.0 */
+            animation: mymove3 500ms forwards;
+     -webkit-animation-timing-function: linear;
+     animation-timing-function: linear;
+}
+
+@-webkit-keyframes mymove3 {
+            from {
+                bottom: -300px;
+            }
+
+            to {
+                bottom: 0px;
+            }
+        }
+
+@-webkit-keyframes mymove2 {
+            from {
+                right: -300px;
+            }
+
+            to {
+                right: 0px;
+            }
+        }
+
+@-webkit-keyframes mymove {
+            from {
+                left: -300px;
+            }
+
+            to {
+                left: 0px;
+            }
+        }
+.submit_button {
+	width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+    background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+      line-height: 42px;
+      padding: 0;
+      border: none;
+    }
+    .submit_button span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .submit_button:before,
+    .submit_button:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: rgba(251,75,2,1);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .submit_button:before{
+       height: 0%;
+       width: 2px;
+    }
+    .submit_button:after {
+      width: 0%;
+      height: 2px;
+    }
+    .submit_button:hover{
+      color: rgba(251,75,2,1);
+      background: transparent;
+    }
+    .submit_button:hover:before {
+      height: 100%;
+    }
+    .submit_button:hover:after {
+      width: 100%;
+    }
+    .submit_button span:before,
+    .submit_button span:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background: rgba(251,75,2,1);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .submit_button span:before {
+      width: 2px;
+      height: 0%;
+    }
+    .submit_button span:after {
+      height: 2px;
+      width: 0%;
+    }
+    .submit_button span:hover:before {
+      height: 100%;
+    }
+    .submit_button span:hover:after {
+      width: 100%;
+    }

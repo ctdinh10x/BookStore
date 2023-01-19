@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<http use-expressions="true" auto-config="false">
+         
+        <intercept-url pattern="/home" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/book/**" access="hasRole('ROLE_ADMIN')"/>
+ 
+</http>

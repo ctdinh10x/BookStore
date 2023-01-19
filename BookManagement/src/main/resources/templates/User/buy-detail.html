@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style-book-detail.css}">
+</head>
+<body>
+    <div class="form_all">
+        <div class="title">
+            <h1>Thông Tin Đặt Hàng</h1>
+        </div>
+        <div class="form_content">
+            <form th:object="${buy}" th:action="@{/user/buy/delete/{idbuy}(idbuy=${buy.id})}"
+                th:method="DELETE" enctype="mutilpart/form-data">
+                <div class="content">
+                    <div class="photo">
+                        <p>Hình ảnh</p>
+                        <div class="img">
+                            <img width="400" height="400" th:src="@{'/getimage/'+${buy.Img}}" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="inforbook">
+                        <div class="BookCode">
+                            <p>Mã sách</p>
+                            <div class="input">
+                                <input type="number" name="BookCode" th:value="${buy.BookCode}" disabled>
+                            </div>
+                        </div>
+        
+                        <div class="Name">
+                            <p>Tên sách</p>
+                            <div class="input">
+                                <input type="text" name="Name" th:value="${buy.Name}"disabled>
+                            </div>
+                        </div>
+        
+                        <div class="Author">
+                            <p>Tác giả</p>
+                            <div class="input">
+                                <input type="text" name="Author" th:value="${buy.Author}" disabled>
+                            </div>
+                        </div>
+        
+                        <div class="Title">
+                            <p>Tiêu đề</p>
+                            <div class="input">
+                                <input type="text" name="Title" th:value="${buy.Title}"disabled>
+                            </div>
+                        </div>
+        
+                        <div class="RelaeseDate">
+                            <p>Ngày phát hành</p>
+                            <div class="input">
+                                <input type="text" name="ReleaseDate" th:value="${buy.ReleaseDate}"disabled>
+                            </div>
+                        </div>
+        
+                        <div class="NumberOfPages">
+                            <p>Số trang</p>
+                            <div class="input">
+                                <input type="number" name="NumberOfPages" th:value="${buy.NumberOfPages}" required disabled>
+                            </div>
+                        </div>
+        
+                        <div class="Type">
+                            <p>Thể loại</p>
+                            <div class="input">
+                                <input type="text" name="Type" th:value="${buy.Type}" required disabled>
+                            </div>
+                        </div>
+                        
+                        <div class="Amount">
+                            <p>Số lượng đặt mua</p>
+                            <div class="input">
+                                <input type="number" name="Amount" th:value="${buy.Amount}" required disabled>
+                            </div>
+                        </div>
+        
+                        <div class="Describe">
+                            <p>Mô tả</p>
+                            <div class="input">
+                                <input type="text" name="Decribe" th:value="${buy.Decribe}" required disabled><br />
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="save" value="save" id="save" style="display:block" }>Hủy đặt hàng</button>
+                    <div class="cancel">
+                        <a th:href="@{/user/buys}">Thoát</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

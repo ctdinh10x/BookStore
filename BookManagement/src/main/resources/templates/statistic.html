@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Thư viện sách</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style-books.css}">
+	<link rel="stylesheet" th:href="@{/css/themify-icons/themify-icons.css}">
+</head>
+<body>
+	<div class="container">
+        <div class="header">
+        	<div class="header username">
+                <label class="user" style="line-height: 50px;
+                            color: white;
+                            font-size: 20px;" th:text="'Xin chào, ' + ${#request.remoteUser}"><i class="ti-arrow-circle-down"></i></label>
+                <ul class="list-user">
+                    <li><a th:href="@{/user/infor}">Thông tin người dùng</a></li>
+                    <li><a th:href="@{/user/book}">Cửa hàng</a></li>
+                    <li><a th:href="@{/user/buys}">Giỏ hàng</a></li>
+                    <li><a th:href="@{/admin/book}">Quản lý thông tin sách</a></li>
+                </ul>
+            </div>
+            
+            <div class="login">
+                <a th:href="@{/home}">Đăng xuất</a>
+            </div>
+        </div>
+        
+		<div class="row">
+			<h1>Báo cáo thống kê</h1>
+
+		</div>
+		<table class="table table-striped table-bordered">
+			<thead class="table-dark">
+				<tr>
+					<th>Ảnh</th>
+					<th>Tiêu đề</th>
+					<th>Tác giả</th>
+					<th>Thể loại</th>
+					<th>Ngày phát hành</th>
+					<th>Số trang</th>
+					<th></th>
+				</tr>
+			</thead>
+	
+			<tbody>
+				<tr th:each="book: ${books}">
+					<td><img width="100" th:src="@{'/getimage/'+${book.Img}}" alt=""></td>
+					<td th:text="${book.Title}"></td>
+					<td th:text="${book.Author}"></td>
+					<td th:text="${book.Type}"></td>
+					<td th:text="${book.ReleaseDate}"></td>
+					<td th:text="${book.NumberOfPages}"></td>
+					<td><a th:href="@{/admin/statistic/{BookCode}(BookCode = ${book.BookCode})}"
+						class="btn btn-success">Xem</a>
+			</tbody>	
+		</table>
+	</div>
+</body>
+</html>

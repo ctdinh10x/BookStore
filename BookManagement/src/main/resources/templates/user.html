@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/userinfor-style.css}">
+    <title>Thông tin người dùng</title>
+</head>
+<body>
+    <div class="title">Thông tin người dùng</div>
+    <div class="all">
+        <div class="id_user">
+            <p>Mã người dùng:</p>
+            <div th:text="${user.Id}"></div>
+        </div>
+        <div class="name_user">
+            <p>Tên người dùng:</p>
+            <div th:text="${user.UserName}"></div>
+        </div>
+        <div class="email_user">
+            <p>Email người dùng:</p>
+            <div th:text="${user.Email}"></div>
+        </div>
+        <div class="PhoneNumber">
+            <p>Số điện thoại của người dùng:</p>
+            <div th:text="${user.PhoneNumber}"></div>
+        </div>
+        <div class="role_user">
+            <p>Quyền truy cập của người dùng:</p>
+            <div th:text="${user.Role}"></div>
+        </div>
+        <div class="cancel">
+            <a th:href="@{/user/book}">Thoát</a>
+        </div>
+    </div>
+    
+</body>
+</html>

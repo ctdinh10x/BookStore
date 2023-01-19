@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" th:href="@{/css/style-signup.css}">
+    <link rel="stylesheet" th:href="@{/css/themify-icons/themify-icons.css}"> 
+</head>
+<body>
+    <!-- <div class="grid wide"> -->
+        <div class="all">
+            <div class="SignUp">
+                <div class="p_signup">
+                    <p>Đăng kí</p>
+                </div>
+    
+                <div class="close">
+                    <a th:href="@{/book}">
+                        <i class="ti-close"></i>
+                    </a>
+                </div>
+                
+                <form th:object="${user}" th:action="@{/user/save/UserName}" th:method="POST">
+                    <div class="list_info">
+                        <div class="name_info" >
+                            <p>Tên đăng nhập</p>
+                            <input type="text" name="UserName" id="username" th:value = "${user.UserName}" required>
+                        </div>
+                        
+                        <div class="email_info">
+                            <p>Email</p>
+                            <input type="text" name="Email" id="email" th:value = "${user.Email}" required>
+                        </div>
+                        <div class="password_info">
+                            <p>Mật khẩu</p>
+                            <input type="password" name="PassWord" id="password" th:value = "${user.PassWord}" required>
+                        </div>
+                        <div class="password_info">
+                            <p>Số điện thoại</p>
+                            <input type="text" name="PhoneNumber" id="phonenumber" th:value = "${user.PhoneNumber}" required>
+                        </div>
+                    </div>
+                    
+                    <div style="color:red; margin-bottom:20px">Đăng kí thất bại tên đăng nhập đã tồn tại</div>
+
+                    <div class="btn_signup" id="submit">
+                        <div class="signup_button">
+                            <button class="submit_button" type="submit"><span>Click!</span><span>Đăng kí</span></button>
+                        </div>
+                    </div>
+                    
+                </form>
+                
+                
+               
+                <div class="end_signup">
+                    <p>Bạn đã có tài khoản?</p>
+                    <a th:href="@{/book/Login}">Đăng nhập</a>
+                </div>
+            </div>  
+        </div>
+</body>
+</html>
