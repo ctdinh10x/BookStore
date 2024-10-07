@@ -15,8 +15,10 @@ import com.example.BookManagement.Book;
 public class CommentDAO {
 
 	private String jdbcURL = "jdbc:mysql://localhost:3306/bookmanagement";
-	private String jdbcUsername = "root";
-	private String jdbcPassword = "chutamdinh0365";
+//	username mysql
+	private String jdbcUsername = ""; 
+//	password mysql
+	private String jdbcPassword = ""; 
 	
 	private static final String SELECT_ALL_COMMENTS_BY_BOOKCODE = "select user.UserName, comment.SoSao,  comment.NoiDung, comment.ThoiGian from user,comment where user.ID = comment.idUser and comment.BookCode = ?";
 	private static final String INSERT_COMMENTS_SQL = "INSERT INTO comment (idUser, BookCode, SoSao, NoiDung) VALUES (?,?,?,?);";

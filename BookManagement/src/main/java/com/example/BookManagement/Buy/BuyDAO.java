@@ -15,8 +15,10 @@ import com.example.BookManagement.Comment.ShowComment;
 public class BuyDAO {
 	
 	private String jdbcURL = "jdbc:mysql://localhost:3306/bookmanagement";
-	private String jdbcUsername = "root";
-	private String jdbcPassword = "chutamdinh0365";
+//	username mysql
+	private String jdbcUsername = ""; 
+//	password mysql
+	private String jdbcPassword = ""; 
 	
 	private static final String SELECT_ALL_BUYS = "select buy.idbuy,book.BookCode, book.Name, book.NumberOfPages, book.Img, book.Title, book.Author, book.Type, book.ReleaseDate, book.Painted, buy.Amount from book,buy,user where user.ID = buy.User and book.BookCode = buy.Book and buy.User = ?";
 	private static final String SELECT_BUY = "select user.ID,buy.idbuy,book.BookCode, book.Name, book.NumberOfPages, book.Img, book.Title, book.Author, book.Type, book.ReleaseDate, book.Painted, buy.Amount from book,buy,user where user.ID = buy.User and book.BookCode = buy.Book and buy.idBuy = ?";

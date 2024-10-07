@@ -11,8 +11,10 @@ import java.util.List;
 public class BookDAO {
 
 	private String jdbcURL = "jdbc:mysql://localhost:3306/bookmanagement";
-	private String jdbcUsername = "root";
-	private String jdbcPassword = "chutamdinh0365";
+//	username mysql
+	private String jdbcUsername = ""; 
+//	password mysql
+	private String jdbcPassword = ""; 
 	
 	private static final String SELECT_ALL_BOOKS = "select * from book";
 	private static final String SELECT_BOOK_BY_ID = "select * from book where BookCode=?";
