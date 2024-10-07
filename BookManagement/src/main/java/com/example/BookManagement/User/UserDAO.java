@@ -17,8 +17,10 @@ import com.example.BookManagement.Book;
 public class UserDAO {
 
 	private String jdbcURL = "jdbc:mysql://localhost:3306/bookmanagement";
-	private String jdbcUsername = "root";
-	private String jdbcPassword = "chutamdinh0365";
+//	username mysql
+	private String jdbcUsername = ""; 
+//	password mysql
+	private String jdbcPassword = ""; 
 	
 	private static final String SELECT_ALL_USERS = "select * from user";
 	private static final String SELECT_USER_BY_USERNAME = "select * from user where USERNAME=?";
